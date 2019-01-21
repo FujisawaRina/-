@@ -1,24 +1,22 @@
-% ‰Û‘è‚Q@ŠK’²”‚Æ‹^Ž——ÖŠs
+% èª²é¡Œï¼’ã€€éšŽèª¿æ•°ã¨ç–‘ä¼¼è¼ªéƒ­
 
-% ‚QŠK’²C‚SŠK’²C‚WŠK’²‚Ì‰æ‘œ‚ð¶¬‚¹‚æD
-
-
-clear; % •Ï”‚ÌƒI[ƒ‹ƒNƒŠƒA
+% ï¼’éšŽèª¿ï¼Œï¼”éšŽèª¿ï¼Œï¼˜éšŽèª¿ã®ç”»åƒã‚’ç”Ÿæˆã›ã‚ˆï¼Ž
 
 
+clear; % å¤‰æ•°ã®ã‚ªãƒ¼ãƒ«ã‚¯ãƒªã‚¢
 
 
-ORG=imread('https://www.j-wave.co.jp/blog/news/images/180428_2.jpg'); % Œ´‰æ‘œ‚Ì“ü—Í
+ORG=imread('anpanman.png'); % åŽŸç”»åƒã®å…¥åŠ›
 
 ORG = rgb2gray(ORG); colormap(gray); colorbar;
 
-imagesc(ORG); axis image; % ‰æ‘œ‚Ì•\Ž¦
+imagesc(ORG); axis image; % ç”»åƒã®è¡¨ç¤º
 
-pause; % ˆêŽž’âŽ~
+pause; % ä¸€æ™‚åœæ­¢
 
 
 
-% ‚QŠK’²‰æ‘œ‚Ì¶¬
+% ï¼’éšŽèª¿ç”»åƒã®ç”Ÿæˆ
 
 IMG = ORG>128;
 
@@ -28,14 +26,11 @@ pause;
 
 
 
-% ‚SŠK’²‰æ‘œ‚Ì¶¬
+% ï¼”éšŽèª¿ç”»åƒã®ç”Ÿæˆ
 
 IMG0 = ORG>64;
-
 IMG1 = ORG>128;
-
 IMG2 = ORG>192;
-
 IMG = IMG0 + IMG1 + IMG2;
 
 imagesc(IMG); colormap(gray); colorbar;  axis image;
@@ -43,7 +38,7 @@ imagesc(IMG); colormap(gray); colorbar;  axis image;
 pause;
 
 
-% ‚WŠK’²‚É‚Â‚¢‚Ä‚ÍCŠeŽ©ŒŸ“¢‚µ‚Ä‚­‚¾‚³‚¢D
+% ï¼˜éšŽèª¿ã«ã¤ã„ã¦ã¯ï¼Œå„è‡ªæ¤œè¨Žã—ã¦ãã ã•ã„ï¼Ž
 
 IMG0 = ORG>32;
 IMG1 = ORG>64;
@@ -55,4 +50,5 @@ IMG6 = ORG>224;
 IMG = IMG0 + IMG1 + IMG2 + IMG3 + IMG4 + IMG5 + IMG6;
 
 imagesc(IMG); colormap(gray); colorbar;  axis image;
+
 pause;
