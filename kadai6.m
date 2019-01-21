@@ -1,31 +1,30 @@
-% ‰Û‘è‚U@‰æ‘œ‚Ì“ñ’l‰»
+% èª²é¡Œï¼–ã€€ç”»åƒã®äºŒå€¤åŒ–
 
-% ‰æ‘œ‚ğ“ñ’l‰»‚¹‚æD
+% ç”»åƒã‚’äºŒå€¤åŒ–ã›ã‚ˆï¼
 
 
 
-clear; % •Ï”‚ÌƒI[ƒ‹ƒNƒŠƒA
+clear; % å¤‰æ•°ã®ã‚ªãƒ¼ãƒ«ã‚¯ãƒªã‚¢
 
-ORG=imread('https://www.j-wave.co.jp/blog/news/images/180428_2.jpg'); % Œ´‰æ‘œ‚Ì“ü—Í
+ORG=imread('anpanman.png'); % åŸç”»åƒã®å…¥åŠ›
 
 ORG = rgb2gray(ORG);
 
-imagesc(ORG); colormap(gray); colorbar; % ‰æ‘œ‚Ì•\¦
+imagesc(ORG); colormap(gray); colorbar; % ç”»åƒã®è¡¨ç¤º
 
-pause; % ˆê’â~
-
-
+pause; % ä¸€æ™‚åœæ­¢
 
 
 
-IMG = ORG>128; % 128‚É‚æ‚é“ñ’l‰»
 
-imagesc(IMG); colormap(gray); colorbar; % ‰æ‘œ‚Ì•\¦
+IMG = ORG>128; % 128ã«ã‚ˆã‚‹äºŒå€¤åŒ–
+
+imagesc(IMG); colormap(gray); colorbar; % ç”»åƒã®è¡¨ç¤º
 
 pause;
 
 
 
-IMG = dither(ORG); % ƒfƒBƒU–@‚É‚æ‚é“ñ’l‰»
+IMG = dither(ORG); % ãƒ‡ã‚£ã‚¶æ³•ã«ã‚ˆã‚‹äºŒå€¤åŒ–
 
-imagesc(IMG); colormap(gray); colorbar; % ‰æ‘œ‚Ì•\¦
+imagesc(IMG); colormap(gray); colorbar; % ç”»åƒã®è¡¨ç¤º
